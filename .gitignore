@@ -1,0 +1,11 @@
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Caché de Pytest
+.pytest_cache/
+CACHEDIR.TAG
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
