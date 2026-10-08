@@ -1,76 +1,98 @@
-Pre-entrega Automation Testing – SauceDemo
+# Pre-entrega Automation Testing – SauceDemo
 
-Proyecto de automatización de pruebas funcionales para el sitio SauceDemo, desarrollado con Python, Pytest y Selenium WebDriver.
+Proyecto de automatización de pruebas funcionales para el sitio [SauceDemo](https://www.saucedemo.com), desarrollado con Python, Pytest y Selenium WebDriver.
 
-🎯 Propósito del proyecto
+## 🎯 Propósito del proyecto
 
 El objetivo es automatizar los principales flujos de la aplicación SauceDemo para validar su correcto funcionamiento de forma repetible y rápida:
 
-Login con credenciales válidas
-Verificación del catálogo de productos
-Interacción con el carrito de compras (añadir primer producto y verificar ítem en carrito)
+- **Login** con credenciales válidas
+- **Verificación del catálogo** de productos
+- **Interacción con el carrito de compras** (añadir el primer producto y verificar el ítem en el carrito)
 
-🛠️ Tecnologías utilizadas
-Tecnología	Uso
-Python	Lenguaje de programación principal
-Pytest	Framework de testing para estructurar y ejecutar las pruebas
-Selenium WebDriver	Automatización de la interfaz web
-pytest-html	Generación de reportes HTML
-Git / GitHub	Control de versiones y distribución del código
+## 🛠️ Tecnologías utilizadas
 
-📋 Requisitos previos
-Python 3.9 o superior
-Google Chrome instalado
-Git
+| Tecnología | Uso |
+|---|---|
+| **Python** | Lenguaje de programación principal |
+| **Pytest** | Framework de testing para estructurar y ejecutar las pruebas |
+| **Selenium WebDriver** | Automatización de la interfaz web |
+| **pytest-html** | Generación de reportes HTML |
+| **Git / GitHub** | Control de versiones y distribución del código |
 
-Selenium 4.6+ incluye Selenium Manager, que descarga automáticamente el ChromeDriver compatible con tu versión de Chrome. No es necesario instalarlo manualmente.
+## 📋 Requisitos previos
 
-⚙️ Instalación de dependencias
-Clonar el repositorio:
-bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd pre-entrega-automation-testing
-(Recomendado) Crear y activar un entorno virtual:
-bash
-   python -m venv venv
+- Python 3.9 o superior
+- Google Chrome instalado
+- Git
 
-   # Windows
-   venv\Scripts\activate
+> Selenium 4.6+ incluye **Selenium Manager**, que descarga automáticamente el ChromeDriver compatible con tu versión de Chrome. No es necesario instalarlo manualmente.
 
-   # macOS / Linux
-   source venv/bin/activate
-Instalar las dependencias, una por una:
-Dependencia	Para qué sirve	Comando
-Pytest	Framework para estructurar y ejecutar las pruebas	pip install pytest
-Pytest-HTML	Plugin de Pytest que genera el reporte en HTML	pip install pytest-html
-Selenium WebDriver	Automatización del navegador	pip install selenium
-O bien, todas juntas en un solo comando:
-bash
+## ⚙️ Instalación de dependencias
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/Brandon-Erazo/pre-entrega-automation-testing-brandon-erazo.git
+   cd pre-entrega-automation-testing-brandon-erazo
+   ```
+
+2. Instalar las dependencias, una por una:
+
+   | Dependencia | Para qué sirve | Comando |
+   |---|---|---|
+   | **Pytest** | Framework para estructurar y ejecutar las pruebas | `pip install pytest` |
+   | **Pytest-HTML** | Plugin de Pytest que genera el reporte en HTML | `pip install pytest-html` |
+   | **Selenium WebDriver** | Automatización del navegador | `pip install selenium` |
+
+   O bien, todas juntas en un solo comando:
+
+   ```bash
    pip install pytest pytest-html selenium
-Verificar la instalación:
-bash
+   ```
+
+3. Verificar la instalación:
+
+   ```bash
    python --version
    pytest --version
    pip show pytest-html
    pip show selenium
-▶️ Ejecución de las pruebas
+   ```
+
+## ▶️ Ejecución de las pruebas
 
 Ejecutar todas las pruebas y generar el reporte HTML:
 
-bash
-pytest -v --html=reporte.html
+```bash
+pytest -v --html=reports/reporte.html
+```
 
-Al finalizar, abrir el archivo reporte.html en el navegador para ver el detalle de los resultados.
+Al finalizar, abrir el archivo `reports/reporte.html` en el navegador para ver el detalle de los resultados.
 
-🔗 Control de versiones
+## 📁 Estructura del proyecto
 
-El código se gestiona con Git y se aloja en GitHub:
+```
+pre-entrega-automation-testing-brandon-erazo/
+├── reports/
+│   └── reporte.html
+├── tests/
+│   ├── test_login.py
+│   ├── test_inventory.py
+│   └── test_cart.py
+├── .gitignore
+└── README.md
+├── pytest.ini
+```
 
-bash
-git add .
-git commit -m "Descripción del cambio"
-git push origin main
+## 🧪 Credenciales de prueba (SauceDemo)
 
-👤 Autor: Brandon Erazo
+| Usuario | Contraseña |
+|---|---|
+| `standard_user` | `secret_sauce` |
+
+## 👤 Autor
+
+**Brandon Erazo**
 
 Proyecto realizado como pre-entrega del curso de Automation Testing.
